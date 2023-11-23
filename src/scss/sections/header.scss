@@ -49,13 +49,12 @@
       }
     }
   }
-
-}
-
-.download-btn {
+&-download__btn {
   @include buttonWithoutBG(162,56,12, 25,19)
 }
-.register-btn {
-  @include buttonWithBG(114,56,12, 25,19)
+
+  &-register__btn {
+    @include buttonWithBG(114,56,12, 25,19)
+  }
 }
 

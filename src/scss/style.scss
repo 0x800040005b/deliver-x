@@ -7,10 +7,12 @@
 @import "sections/hero";
 @import "sections/trust";
 @import "sections/steps";
+@import "sections/advantages";
 
 
 .container {
-  max-width: 1270px;
+  max-width: 1230px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -34,6 +36,24 @@
     weight: 400;
   }
 }
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+.actions {
+  display: flex;
+justify-content: center;
+  align-items: center;
+}
+.action_1 {
+  margin-right: 27px;
+}
+.register-btn {
+  @include buttonWithBG(247,73,16,39,26)
+}
+.download-btn {
+  @include buttonWithoutBG(205,73,16,39,26)
 }
 
 
