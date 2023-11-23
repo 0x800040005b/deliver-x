@@ -1,20 +1,17 @@
 .hero {
   position: relative;
   padding-bottom: 119px;
-  &-bg {
-    position: absolute;
-    right: 0;
-  }
   &-content {
-    //padding: 101px 0;
+    position: relative;
     &-row {
       display: flex;
+      position: relative;
     }
     &__text {
+      padding:163px 0;
       position: relative;
       z-index: 2;
-      max-width: 586px;
-      margin-right: 50px;
+      margin-right: 140px;
     }
     &__top {
       margin-bottom: 60px;
@@ -29,9 +26,11 @@
     }
     &__phone {
       position: absolute;
-      z-index: 2;
-      top:140px;
-      right: 23.5%;
+      right: 28%;
+      bottom: 60px;
+    }
+    &__photo {
+      flex: 1 0 602px;
     }
   }
 
@@ -74,7 +73,7 @@
   &-achievements {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    //align-items: center;
   }
   &-achievement {
     &__number {
@@ -91,7 +90,7 @@
     }
     &__label {
       color: $dark-gray;
-      line-height: 19.998px; /* 111.1% */
+      //line-height: 19.998px; /* 111.1% */
       font: {
         size: 18px;
         weight: 400;

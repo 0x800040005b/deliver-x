@@ -1,0 +1,33 @@
+.trust {
+  &-content {
+    padding: 119px 0 140px 0;
+    &__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $dark-gray;
+      text-align: center;
+      line-height: 22px; /* 110% */
+      margin-bottom: 48px;
+      font: {
+        size: 20px;
+        weight: 400;
+      }
+    }
+
+    &__images {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    & hr {
+      margin-top: 142px;
+      background-color: $dark-gray;
+    }
+  }
+  &-text {
+    margin-left: 30px;
+
+  }
+}

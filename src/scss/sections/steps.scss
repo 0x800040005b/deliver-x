@@ -1,0 +1,82 @@
+.step {
+  &-content {
+    padding: 200px 0;
+
+    &__text {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 76px;
+      //border: 1px solid red;
+    }
+  }
+  &-title {
+    line-height: 54px;
+    margin-bottom: 22px;
+  }
+  &-subtitle {
+    margin-bottom: 7px;
+  }
+  &-desc {
+    color: $dark-gray;
+    text-align: center;
+    line-height: 30.006px; /* 250.05% */
+
+    font: {
+      size: 12px;
+      weight: 400;
+    }
+  }
+  &_big-text {
+    display: inline-block;
+    margin-left: calc(100% - 337px);
+    font-size: 18px;
+  }
+&-blocks {
+  display: flex;
+  margin-bottom: 53px;
+}
+  &-block {
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 95.95px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &__title {
+      color: #121212;
+      //text-align: center;
+      line-height: 40.012px; /* 142.9% */
+      margin-bottom: 15px;
+      font: {
+        size: 28px;
+        weight: 400;
+      }
+    }
+    &__info {
+      color: $dark-gray;
+      text-align: center;
+      line-height: 30.006px; /* 166.7% */
+      font: {
+        size: 18px;
+        weight: 400;
+      }
+    }
+  }
+  &-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+  }
+  &-action {
+    &_1 {
+      margin-right: 27px;
+      @include buttonWithBG(247,73,16,39,26)
+    }
+    &_2 {
+      @include buttonWithoutBG(205,73,16,39,26)
+    }
+  }
+}
