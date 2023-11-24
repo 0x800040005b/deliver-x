@@ -1,0 +1,109 @@
+.reviews {
+  background: $white-2;
+  &-content {
+    padding: 200px 0;
+
+  }
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    &__text {
+      max-width: 490px;
+    }
+  }
+  &-text {
+    &__title {
+      color: $black;
+      line-height: 53.988px; /* 122.7% */
+      margin-bottom: 22px;
+      font: {
+        size: 44px;
+        weight: 400;
+      }
+    }
+    &__desc {
+      color: $dark-gray;
+      line-height: 30.006px; /* 250.05% */
+      padding-right: 25px;
+      font: {
+        size: 12px;
+        weight: 400;
+      }
+    }
+  }
+  &-items {
+    display: flex;
+    margin-bottom: 28px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+  }
+  &-item {
+    width: 100%;
+    height: 100%;
+    max-width: 389px;
+    max-height: 286px;
+    background: $white;
+    border-radius: 24px;
+    border: 1px solid $white-3;
+    box-shadow: 0 2px 12px 0 rgba(16, 16, 16, 0.08);
+    flex-shrink: 0;
+    padding: 41px 41px 42px 33px;
+    margin-right: 28px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &-top {
+      margin-bottom: 30px;
+      &__row {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__info {
+        display: flex;
+        align-items: flex-start;
+      }
+      &__avatar {
+        margin-right: 10px;
+      }
+      &__name {
+        color: $black;
+        line-height: 19.998px; /* 111.1% */
+        margin-bottom: 6px;
+        font: {
+          size: 18px;
+          weight: 400;
+        }
+      }
+      &__position {
+        color: $orange;
+        line-height: 18px; /* 112.5% */
+        font: {
+          size: 16px;
+          weight: 400;
+        }
+      }
+      &__btn {
+        width: 36px;
+        height: 36px;
+        background: $blue;
+        opacity: 0.1;
+        border-radius: 8px;
+        border: none;
+      }
+    }
+    &__content {
+      max-height: 91px;
+      overflow-y: auto;
+      color: $dark-gray;
+      line-height: 30.006px; /* 166.7% */
+      font: {
+        size: 18px;
+        weight: 400;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.offer {
+  background: $black;
+  &-row {
+    display: flex;
+    align-items: center;
+  }
+  &-text {
+    max-width: 582px;
+    margin-right: 72px;
+    &__title {
+      color: $white;
+      line-height: 66.024px; /* 117.9% */
+      margin-bottom: 16px;
+      font: {
+        size: 56px;
+        weight: 700;
+      }
+    }
+    &__desc {
+      color: $white;
+      line-height: 30.006px; /* 250.05% */
+      margin-bottom: 27px;
+      padding-right: 40px;
+      font: {
+        size: 12px;
+        weight: 400;
+      }
+    }
+  }
+  &-btn {
+    @include buttonWithBG(206, 73,16,39,26);
+    border: none;
+  }
+  &-sliders {
+    display: flex;
+
+  }
+  &-slider {
+    &__left {
+      margin-right: 30px;
+    }
+  }
+  &-slide {
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+}

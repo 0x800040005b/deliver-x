@@ -3,13 +3,13 @@
     weight: 400;
   }
   color: $black;
-  background-color: transparent;
+  background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid $light-gray ;
   border-radius: $radius+px;
-  padding: $padding-y+px $padding-x+px;
+  //padding: $padding-y+px $padding-x+px;
   @if $width > 0 {
     width: $width+px;
   }
