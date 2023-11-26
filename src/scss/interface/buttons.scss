@@ -28,8 +28,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid $light-gray ;
+  //border: 1px solid $light-gray ;
   border-radius: $radius+px;
+
   padding: $padding-y+px $padding-x+px;
   @if $width > 0 {
     max-width: $width+px;

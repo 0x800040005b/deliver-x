@@ -1,0 +1,44 @@
+.attract {
+  background: $black;
+  &-content {
+    position: relative;
+    padding-top: 158px;
+    padding-bottom: 186px;
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+  }
+  &-col {
+    &__text {
+      position: relative;
+      z-index: 2;
+      color: $white;
+      max-width: 582px;
+    }
+    &__picture {
+      position: absolute;
+      top: -93px;
+      right: -20px;
+    }
+  }
+  &-text {
+    padding-right: 40px;
+    &__title {
+      line-height: 66.024px; /* 117.9% */
+      margin-bottom: 25px;
+      font: {
+        size: 56px;
+        weight: 400;
+      }
+    }
+    &__content {
+      line-height: 30.006px; /* 250.05% */
+      margin-bottom: 33px;
+      font: {
+        size: 12px;
+        weight: 400;
+      }
+    }
+  }
+}
