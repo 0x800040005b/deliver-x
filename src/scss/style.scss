@@ -63,4 +63,7 @@ justify-content: center;
   @include buttonWithoutBG(205,73,16,39,26)
 }
 
+@import "interface/modal";
+@import "interface/forms";
+
 
