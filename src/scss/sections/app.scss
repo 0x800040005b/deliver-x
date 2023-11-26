@@ -1,0 +1,65 @@
+.app {
+  padding-top: 70px;
+  padding-bottom: 84px;
+  &-row {
+    display: flex;
+    align-items: center;
+  }
+  &-col {
+    &__text {
+      margin-right: 287px;
+      width: 100%;
+      max-width: 450px;
+
+    }
+  }
+  &-logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+  &-text {
+    color: $dark-gray;
+    line-height: 30.006px; /* 250.05% */
+    font: {
+      size: 12px;
+      weight: 400;
+    }
+  }
+  &-buttons {
+    display: flex;
+    align-items: center;
+  }
+  &-action {
+    &_1 {
+      margin-right: 26px;
+    }
+  }
+
+}
+
+.download{
+  &-ios, &-android {
+    color: #FFF;
+    text-align: center;
+    line-height: 22px; /* 137.5% */
+    border-radius: 14px;
+    border: 1px solid $orange;
+    background: $orange;
+    font: {
+      size: 16px;
+      weight: 700;
+    }
+  }
+  &-ios {
+    padding: 24px 37px 20px 34px;
+    margin-right: 26px;
+
+  }
+  &-android {
+    padding: 23px 39px 19px 37px;
+
+  }
+
+}
+
+
