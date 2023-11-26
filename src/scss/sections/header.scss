@@ -36,6 +36,13 @@
         size: 16px;
         weight: 400;
       }
+      &:hover {
+        color: $orange;
+        text-decoration: none;
+      }
+      &.active {
+        color: $orange;
+      }
     }
   }
 
