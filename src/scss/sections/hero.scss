@@ -1,14 +1,16 @@
 .hero {
   &-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   &-col {
     &__img {
       flex: 1 1 722px
     }
     &__text {
+      padding: 101px 0;
       margin-right: 50px;
+      max-width: 586px;
     }
   }
   &-subtitle {
@@ -18,6 +20,8 @@
     margin-bottom: 16px;
   }
   &-text {
+    max-height: 100px;
+    overflow-y: auto;
     color: $dark-gray;
     line-height: 30.006px; /* 250.05% */
     margin-bottom: 33px;

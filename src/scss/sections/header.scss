@@ -1,6 +1,6 @@
 .header {
   background: #FFFFFF;
-  box-shadow: 0px 3px 12px 0px rgba(18, 18, 18, 0.06);
+  box-shadow: 0 3px 12px 0 rgba(18, 18, 18, 0.06);
 
   &-content {
     padding: 32px 0;
@@ -17,6 +17,12 @@
   }
   &-nav {
     margin-right: 32px;
+  }
+  &-mobile {
+    &__block {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &-menu {

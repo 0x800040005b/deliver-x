@@ -1,0 +1,139 @@
+@media (screen and max-width: 1200px) {
+.header {
+  &-flex-container {
+    justify-content: center;
+  }
+  &-col {
+    &__logo {
+      margin-right: 100px;
+
+    }
+  }
+
+}
+}
+
+@media (screen and max-width: 940px) {
+  .popup {
+    width: 80%;
+  }
+  .burger.mobile {
+    display: block;
+  }
+
+  .header {
+    &-flex-container {
+      justify-content: space-between;
+    }
+    &-col {
+      &__logo {
+        margin-right: 0;
+      }
+    }
+    &-mobile__block {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: $white;
+      z-index: 100;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 5px 10px;
+      transition: all 0.8s ease;
+      &.active {
+        left: 0;
+      }
+    }
+    &-interaction {
+      align-items: flex-start;
+      width: 100%;
+      margin-top: auto;
+      justify-content: center;
+    }
+    &-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-menu{
+      &__list {
+        width: 85%;
+        align-items: flex-start;
+        flex-direction: column;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      &__item {
+        border-radius: 15px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 80%;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      &__link {
+        border: 1px solid $orange;
+        &.active {
+          color: $white;
+          background: $orange;
+        }
+        border-radius: 15px;
+        display: block;
+        width: 100%;
+        padding: 10px 5px;
+        padding-left: 20px;
+      }
+    }
+
+    &-nav {
+      margin-right: 0;
+    }
+  }
+  .close-btn__menu {
+    top:10px;
+    right: 5px;
+    display: block;
+  }
+}
+@media (screen and max-width: 768px) {
+  .popup {
+    width: 100%;
+  }
+}
+
+
+@media (screen and max-width: 475px) {
+  .close-btn {
+    width: 25px;
+    height: 25px;
+  }
+  .popup {
+    &-title {
+      font-size: 25px;
+    }
+  }
+  .header {
+    &-mobile__block {
+      width: 100%;
+    }
+  }
+}
+@media (screen and max-width: 375px) {
+  .popup {
+    &-title {
+      font-size: 20px;
+    }
+  }
+
+  .header {
+    &-col {
+      &__logo {
+        margin-right: 0;
+      }
+    }
+  }
+}
+

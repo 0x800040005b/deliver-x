@@ -2,7 +2,7 @@
   padding-bottom: 200px;
   &-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 120px;
     &:last-of-type {
       margin-bottom: 0;
@@ -35,6 +35,8 @@
       color: $dark-gray;
       line-height: 30.006px; /* 166.7% */
       margin-bottom: 33px;
+      max-height: 200px;
+      overflow-y: auto;
       font: {
         size: 18px;
         weight: 400;

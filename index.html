@@ -18,25 +18,37 @@
                         </picture>
                     </a>
                 </div>
-                <nav class="header-nav">
-                    <ul class="header-menu__list">
-                        <li class="header-menu__item"><a href="#" class="header-menu__link active">Home</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">About</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Pricing</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Pages</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Cart(0)</a></li>
-                    </ul>
-                </nav>
-
-                <div class="header-interaction">
-                    <a href="#" class="header-interaction__btn header-download__btn">Download App</a>
-                    <a href="#" class="header-interaction__btn header-register__btn" data-modal="register">Register</a>
+                <div class="header-mobile__block">
+                    <nav class="header-nav">
+                        <ul class="header-menu__list">
+                            <li class="header-menu__item"><a href="#" class="header-menu__link active">Home</a></li>
+                            <li class="header-menu__item"><a href="#" class="header-menu__link">About</a></li>
+                            <li class="header-menu__item"><a href="#" class="header-menu__link">Pricing</a></li>
+                            <li class="header-menu__item"><a href="#" class="header-menu__link">Pages</a></li>
+                            <li class="header-menu__item"><a href="#" class="header-menu__link">Cart(0)</a></li>
+                        </ul>
+                        <button class="close-btn active close-btn__menu" data-active="false" id="close-btn__menu">
+                            <span class="line line_1"></span>
+                            <span class="line line_2"></span>
+                        </button>
+                    </nav>
+                    <div class="header-interaction">
+                        <a href="#" class="header-interaction__btn header-download__btn">Download App</a>
+                        <a href="#" class="header-interaction__btn header-register__btn"
+                           data-modal="register" data-active="false">Register</a>
+                    </div>
                 </div>
+                <button class="burger mobile" data-active="false">
+                    <span class="burger-line burger-line_1"></span>
+                    <span class="burger-line burger-line_2"></span>
+                    <span class="burger-line burger-line_3"></span>
+                </button>
             </div>
         </div>
     </div>
     <!-- /.container -->
 </header>
+
 
 <section class="hero">
     <div class="container">
@@ -50,7 +62,7 @@
                         sitegestas hendrerit et maecenas habitant mattis in facili.
                     </div>
                     <div class=" hero-actions">
-                        <a href="#" data-modal="register" class="action action_1 register-btn">Register restaurant</a>
+                        <a href="#" data-modal="register" data-active="false" class="action action_1 register-btn">Register restaurant</a>
                         <a href="#" class="action action_2 download-btn">Download app</a>
                     </div>
                     <hr class="hero-line">
@@ -89,6 +101,7 @@
         </div>
     </div>
 </section>
+<!--
 <section class="trust" id="trust">
     <div class="container">
         <div class="trust-content">
@@ -163,7 +176,7 @@
             </div>
 
             <div class="actions step-actions">
-                <a href="#" class="action action_1 register-btn" data-modal="register">Register restaurant</a>
+                <a href="#" class="action action_1 register-btn" data-modal="register" data-active="false">Register restaurant</a>
                 <a href="#" class="action action_2 download-btn">Download app</a>
 
             </div>
@@ -255,7 +268,7 @@
                 </div>
             </div>
             <div class="actions">
-                <a href="#" class="action action_1 register-btn" data-modal="register">Register restaurant</a>
+                <a href="#" class="action action_1 register-btn" data-modal="register" data-active="false">Register restaurant</a>
                 <a href="#" class="action action_2 download-btn">Download app</a>
 
             </div>
@@ -394,7 +407,7 @@
             </div>
 
             <div class="actions features-actions">
-                <a href="#" class="action action_1 register-btn"  data-modal="register">Register restaurant</a>
+                <a href="#" class="action action_1 register-btn"  data-modal="register" data-active="false">Register restaurant</a>
                 <a href="#" class="action action_2 download-btn">Download app</a>
 
             </div>
@@ -487,7 +500,7 @@
                     </div>
                 </div>
                 <div class="actions reviews-actions">
-                    <a href="#" class="action action_1 register-btn" data-modal="register">Register restaurant</a>
+                    <a href="#" class="action action_1 register-btn" data-modal="register" data-active="false">Register restaurant</a>
                     <a href="#" class="action action_2 download-btn" >Download app</a>
 
                 </div>
@@ -630,7 +643,7 @@
                         <div class="attract-text__content">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis
                             sit phasellus mollis sit aliquam sit nullam neque ultrices.
                         </div>
-                        <a href="#" class="action action_1 attract-action register-btn" data-modal="register">Register restaurant</a>
+                        <a href="#" class="action action_1 attract-action register-btn" data-modal="register" data-active="false">Register restaurant</a>
 
 
                     </div>
@@ -770,10 +783,10 @@
         </div>
     </div>
 </footer>
-
+-->
 <div class="overlay" id="overlay"></div>
 <div class="popup" id="popup" data-modal-name="register">
-    <button class="close-btn" id="close-btn">
+    <button class="close-btn active" id="close-btn">
         <span class="line line_1"></span>
         <span class="line line_2"></span>
     </button>
@@ -784,49 +797,44 @@
         </div>
         <div class="popup-body">
             <form action="#" method="POST" class="register-form form">
-                <div class="form-fields">
-                    <div class="form-field__block">
-                        <div class="form-field field">
-                            <label for="business_name" class="field-label required">Business name <span>*</span></label>
-                            <input type="text" name="business_name" placeholder="Enter your business name"
-                                   class="form-control" id="business_name">
-                            <small class="error">This field is required</small>
-                        </div>
-                        <div class="form-field field">
-                            <label for="address" class="field-label required">Address <span>*</span></label>
-                            <input type="text" name="address" placeholder="Enter your address" class="form-control"
-                                   id="address">
-                            <small class="error">This field is required</small>
-                        </div>
+                <div class="form-fields scroll">
+                    <div class="form-field field">
+                        <label for="business_name" class="field-label required">Business name <span>*</span></label>
+                        <input type="text" name="business_name" placeholder="Enter your business name"
+                               class="form-control" id="business_name">
+                        <small class="error active">This field is required</small>
                     </div>
-                    <div class="form-field__block">
-                        <div class="form-field field">
-                            <label for="city" class="field-label required">City <span>*</span></label>
-                            <select name="city" id="city" class="form-select">
-                                <option class="option" value="Skhidnytc'a">Skhidnytc'a</option>
-                                <option class="option" value="Novyi Kropyvnyk">Novyi Kropyvnyk</option>
-                                <option class="option" value="Drogobych">Drogobych</option>
-                                <option class="option" value="Lviv">Lviv</option>
-                                <option class="option" value="Kyiv">Kyiv</option>
-                                <option class="option" value="Kharkiv">Kharkiv</option>
-                            </select>
-                            <small class="error">This field is required</small>
+                    <div class="form-field field">
+                        <label for="address" class="field-label required">Address <span>*</span></label>
+                        <input type="text" name="address" placeholder="Enter your address" class="form-control"
+                               id="address">
+                        <small class="error">This field is required</small>
+                    </div>
+                    <div class="form-field field">
+                        <label for="city" class="field-label required">City <span>*</span></label>
+                        <select name="city" id="city" class="form-select">
+                            <option class="option" value="Skhidnytc'a">Skhidnytc'a</option>
+                            <option class="option" value="Novyi Kropyvnyk">Novyi Kropyvnyk</option>
+                            <option class="option" value="Drogobych">Drogobych</option>
+                            <option class="option" value="Lviv">Lviv</option>
+                            <option class="option" value="Kyiv">Kyiv</option>
+                            <option class="option" value="Kharkiv">Kharkiv</option>
+                        </select>
+                        <small class="error">This field is required</small>
 
-                        </div>
-                        <div class="form-field field">
-                            <label for="full__name" class="field-label required">Full name <span>*</span></label>
-                            <input type="text" name="full_name" placeholder="Enter your full name" class="form-control"
-                                   id="full__name">
-                            <small class="error">This field is required</small>
-                        </div>
                     </div>
+                    <div class="form-field field">
+                        <label for="full__name" class="field-label required">Full name <span>*</span></label>
+                        <input type="text" name="full_name" placeholder="Enter your full name" class="form-control"
+                               id="full__name">
+                        <small class="error">This field is required</small>
+                    </div>
+
                 </div>
                 <div class="form-field field form-field__btn">
-                    <button type="submit" href="#" class="form-submit__button">Register restaurant</button>
+                    <button type="submit" class="form-submit__button">Register restaurant</button>
 
                 </div>
-
-
             </form>
         </div>
     </div>

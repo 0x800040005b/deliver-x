@@ -11,16 +11,11 @@ select {
   max-width: 600px;
   width: 100%;
   &-field {
-    //margin-bottom: 20px;
-    margin-right: 20px;
-    width: 50%;
+    margin-bottom: 20px;
+    //margin-right: 20px;
+    width: 100%;
     &:last-of-type {
       margin-right: 0;
-    }
-    &__block {
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
     }
 
     &:last-of-type {
@@ -34,18 +29,21 @@ select {
 
   }
   &-fields {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     max-height: 400px;
     overflow-y: auto;
+    padding-right: 20px;
   }
   &-select {
     border: none;
-    background: rgba($dark-gray, 20%);
+    background: rgba($white, 30%);
+    color: $white;
     width: 100%;
     padding: 10px 15px;
     border-radius: 50px;
     & option.option {
-      border-radius: 20px;
+      color: $black;
+      border-radius: 16px;
       font: {
         size: 18px;
         weight: 700;
@@ -56,17 +54,28 @@ select {
       }
     }
 
+    &:focus {
+      outline: none;
+      border: 1px solid rgba($white, 30%);
+    }
+
   }
   &-control {
-    background: rgba($dark-gray, 20%);
+    background: rgba($white, 30%);
+    color: $white;
     width: 100%;
     padding: 10px 15px;
     border-radius: 50px;
     //border: 1px solid $dark-gray;
     border: none;
     &::placeholder {
-      color: $dark-gray;
+      color: $white;
     }
+    &:focus {
+      outline: none;
+      border: 1px solid rgba($white, 30%);
+    }
+
   }
 
   &-submit {
@@ -74,14 +83,18 @@ select {
       border: 1px solid $orange;
       background: $orange;
       color: $white;
-      text-align: center;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 19.998px; /* 111.1% */
       padding: 18px 25px;
       border-radius: 16px;
       width: 100%;
+      text-align: center;
+      line-height: 19.998px; /* 111.1% */
+      font: {
+        size: 18px;
+        weight: 400;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -91,6 +104,7 @@ select {
     display: block;
     margin-left: 15px;
     margin-bottom: 8px;
+    color: $white;
     font: {
       size: 18px;
       weight: 700;
@@ -108,10 +122,26 @@ small.error {
     margin-top: 10px;
     margin-left: 15px;
     display: block;
-    //border-top: 1px solid $blue;
     color: $red;
     font:{
       weight: 700;
     }
   }
 }
+
+.scroll {
+  &::-webkit-scrollbar {
+    overflow-y: auto;
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba($white, 30%);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid $white;
+  }
+
+}
+

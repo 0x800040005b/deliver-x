@@ -3,29 +3,64 @@
 document.addEventListener('DOMContentLoaded',function (){
    const buttons = document.querySelectorAll('[data-modal="register"]'),
        overlay = document.querySelector('#overlay'),
-       closeBtn = document.querySelector('#close-btn')
+       closeButton = document.querySelector('#close-btn'),
+       closeButtonMenu = document.querySelector('#close-btn__menu'),
+       menu = document.querySelector('.header-mobile__block'),
+       burgerButton = document.querySelector('.burger'),
+       form = document.querySelector('.register-form'),
+       popup = document.querySelector('.popup');
    if(buttons.length === 0) return;
 
+
+
    buttons.forEach((button) => {
-      button.addEventListener('click',function (e){
-         e.preventDefault();
-         console.log(this.dataset.modal);
-         let popup = document.querySelector(`[data-modal-name="${this.dataset.modal}"]`);
-         if(overlay && popup && closeBtn) {
-            toggleItems();
-         }
-      })
+      button.addEventListener('click',registerRestaurant)
    })
 
-   if(closeBtn) closeBtn.addEventListener('click', function (e){
-      toggleItems();
+   if(closeButton) closeButton.addEventListener('click', function (e){
+       buttons.forEach(button => button.dataset.active="false");
+       hideModal(popup);
    });
+   form.addEventListener('submit', (e)=> e.preventDefault());
+   burgerButton.addEventListener('click', openMenuHandler);
+   closeButtonMenu.addEventListener('click', closeMenuHandler);
+function registerRestaurant(e){
+    this.dataset.active = 'true';
 
-function toggleItems() {
-   overlay.classList.toggle('active');
-   closeBtn.classList.toggle('active');
-   popup.classList.toggle('active');
-   document.body.classList.toggle('lock');
+      e.preventDefault();
+      let popup = document.querySelector(`[data-modal-name="${this.dataset.modal}"]`);
+      if(overlay && popup && closeButton) {
+         showModal(popup);
+      }
 
+}
+function openMenuHandler(e) {
+    burgerButton.dataset.active = 'true';
+    showModal(menu);
+}
+function closeMenuHandler(e) {
+    burgerButton.dataset.active = 'false';
+    hideModal(menu);
+}
+
+function hideModal(popup) {
+    if(overlay && closeButton){
+        popup.classList.remove('active');
+        let hasPopupActive = document.querySelectorAll('[data-active="true"]').length > 0;
+        if(!hasPopupActive){
+            overlay.classList.remove('active');
+
+        }
+    }
+
+}
+function showModal(popup) {
+    if(overlay && closeButton && popup){
+        popup.classList.add('active');
+        if(!overlay.classList.contains('active')){
+            overlay.classList.add('active');
+        }
+
+    }
 }
 });

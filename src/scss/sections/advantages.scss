@@ -29,6 +29,8 @@
     //display: flex;
     color: #656565;
     line-height: 30.006px; /* 250.05% */
+    max-height: 100px;
+    overflow-y: auto;
     font: {
       size: 12px;
       weight: 400;
@@ -42,6 +44,7 @@
 }
 .advantage {
   &-block {
+    min-width: 275px;
     margin-right: 48.5px;
     &:last-of-type {
       margin-right: 0;
@@ -65,6 +68,8 @@
     }
     &__desc {
       color: $dark-gray;
+      max-height: 100px;
+      overflow-y: auto;
       line-height: 30.006px; /* 214.329% */
       font: {
         size: 14px;

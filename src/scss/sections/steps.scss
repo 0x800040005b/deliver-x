@@ -45,6 +45,10 @@
     &:last-of-type {
       margin-right: 0;
     }
+    &__descr {
+      max-height: 190px;
+      overflow-y: auto;
+    }
     &__title {
       color: #121212;
       text-align: center;
