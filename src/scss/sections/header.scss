@@ -8,7 +8,6 @@
   &-flex-container {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
   }
   &-col {
     &__logo {
@@ -29,6 +28,8 @@
   &__list {
     display: flex;
     align-items: center;
+    max-width: 340px;
+    overflow-x: auto;
   }
     &__item {
       margin-right: 26px;
