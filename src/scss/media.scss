@@ -259,26 +259,33 @@
       }
     }
     &-menu {
-      transition: all 0.8s ease;
+      transition: max-height 0.8s ease;
       max-height: 0;
-      visibility: hidden;
+      overflow: hidden;
       margin-bottom: 0;
       margin-right: 0;
+      &__parent {
+        width: 100%;
+      }
       &_1 {
         margin-bottom: 20px;
       }
       &.active {
-        visibility: visible;
-        max-height: 100%;
+        overflow: auto;
+        max-height: 500px;
+        transition: max-height 0.8s ease;
+
       }
       &_first {
         flex-direction: column;
-        transition: all 0.8s ease;
+        transition: max-height 0.8s ease;
         max-height: 0;
-        visibility: hidden;
+        overflow: hidden;
         &.active {
-          visibility: visible;
-          max-height: 100%;
+          overflow: auto;
+          max-height: 400px;
+          transition: max-height 0.8s ease;
+
         }
 
       }

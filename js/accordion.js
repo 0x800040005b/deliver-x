@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function (){
         }
         this.classList.toggle('active');
         let menu = this.nextElementSibling;
-        console.log( this instanceof Element);
         if (menu !== null){
             let nestedMenus = menu.querySelectorAll('.footer-menu');
             if(nestedMenus.length === 0) return;
