@@ -1,10 +1,14 @@
 .offer {
   background: $black;
+  & .container {
+    max-width: 100%;
+    padding: 0;
+  }
   &-row {
     display: flex;
     align-items: center;
     min-width: 0;
-    //max-height: 600px;
+    justify-content: space-between;
 
   }
   &-text {
