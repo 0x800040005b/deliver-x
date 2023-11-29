@@ -1,4 +1,4 @@
 import {defineConfig} from "vite";
-export default {
-    // config options
-}
+export default defineConfig({
+    base: '/deliver-x'
+});
