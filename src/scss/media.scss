@@ -356,6 +356,7 @@
       transition: all 0.8s ease;
       &.active {
         left: 0;
+        overflow-y: auto;
       }
     }
     &-interaction {
@@ -363,6 +364,7 @@
       width: 100%;
       margin-top: auto;
       justify-content: center;
+      padding-top: 80px;
     }
     &-nav {
       width: 100%;
@@ -783,5 +785,20 @@
     }
   }
 
+}
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .popup {
+    &.active {
+      overflow-y: auto;
+      height: 100%;
+    }
+    &-content {
+      &::before {
+        border-radius: 9px;
+      }
+
+    }
+  }
 }
 

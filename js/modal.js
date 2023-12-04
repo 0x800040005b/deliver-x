@@ -44,17 +44,20 @@ function closeMenuHandler(e) {
 }
 
 function hideModal(popup) {
+
     if(overlay && closeButton){
         popup.classList.remove('active');
         let hasPopupActive = document.querySelectorAll('[data-active="true"]').length > 0;
         if(!hasPopupActive){
             overlay.classList.remove('active');
-
+            document.body.classList.remove('lock');
         }
     }
 
 }
 function showModal(popup) {
+    document.body.classList.add('lock');
+
     if(overlay && closeButton && popup){
         popup.classList.add('active');
         if(!overlay.classList.contains('active')){
