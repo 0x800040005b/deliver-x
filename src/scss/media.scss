@@ -484,9 +484,10 @@
   .advantage {
     &-blocks {
       &__row {
-        flex-direction: column;
+ /*       flex-direction: column;
         justify-content: stretch;
-        align-items: center;
+        align-items: center;*/
+        display: block;
       }
 
     }

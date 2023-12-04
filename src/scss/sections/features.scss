@@ -4,7 +4,7 @@
     &__top {
       width: 100%;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 56px  auto;
     }
     &__desc {
       color: $dark-gray;
@@ -47,6 +47,7 @@
     max-width: 350px;
     max-height: 260px;
     margin-right: 85px;
+    overflow-y: auto;
     &:last-of-type {
       margin-right: 0;
     }
