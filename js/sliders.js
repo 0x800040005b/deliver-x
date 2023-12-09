@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             direction: direction,
             noSwiping: false,
             allowTouchMove: false,
+            touchReleaseOnEdges: true,
             loop: true,
             autoplay: {
                 delay: 1,
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             spaceBetween: 30,
             speed: 5000,
             slidesPerView: slidesPerView,
+            touchReleaseOnEdges: true,
             direction: direction,
             noSwiping: false,
             loop: true,
